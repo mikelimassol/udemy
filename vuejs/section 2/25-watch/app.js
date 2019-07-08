@@ -10,8 +10,8 @@ new Vue({
       return this.counter > 5 ? "Greater Than Five" : "Lower Than five";
     }
   },
-  watch:{
-    counter: function(value){
+  watch: {
+    counter: function(value) {
       vm = this;
       setTimeout(function() {
         console.log(value);
