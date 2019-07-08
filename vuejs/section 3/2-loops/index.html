@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div id="app">
+      <p v-if="show">you can see me!</p>
+      <p v-else>Now you see me!!! <span>Hello!</span></p>
+      <template v-if="show">
+        <h1>template heading</h1>
+        <div>
+          you can see me in template
+        </div>
+      </template>
+      <p v-show="show">
+        Do you Also See me?
+      </p>
+      <button @click="show = !show">Click</button>
+    </div>
+    <script src="app.js" async defer></script>
+  </body>
+</html>

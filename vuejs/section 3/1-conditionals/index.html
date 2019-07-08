@@ -16,18 +16,19 @@
   </head>
   <body>
     <div id="app">
-      <p>you can see me!</p>
-      <p>
+      <p v-if="show">you can see me!</p>
+      <p v-else>Now you see me!!! <span>Hello!</span></p>
+      <template v-if="show">
+        <h1>template heading</h1>
+        <div>
+          you can see me in template
+        </div>
+      </template>
+      <p v-show="show">
         Do you Also See me?
       </p>
+      <button @click="show = !show">Click</button>
     </div>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-
     <script src="app.js" async defer></script>
   </body>
 </html>
