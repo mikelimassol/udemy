@@ -50,7 +50,7 @@
           <ul>
             <li
               v-for="turn in turns"
-              :class="turn.isPlayer == true ? 'player-turn' : 'monster-turn'"
+              :class="[{'player-turn' : turn.isPlayer}, {'monster-turn':  !turn.isPlayer}]"
             >
               {{ turn.text }}
             </li>
