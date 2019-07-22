@@ -4,7 +4,10 @@
       <p v-if="!updated">Server Details are currently not updated</p>
       <p v-else>Server Details are updated</p>
       <p>{{server.id}} : {{server.status}}</p>
-      <button @click="setToNormal">Set to normal</button>
+      <button @click="updateServer('Normal')">Set to normal</button>
+      <button @click="updateServer('Meintenance')">Set to Meintenance</button>
+      <button @click="updateServer('Critical')">Set to Critical</button>
+      <button @click="updateServer('Unknown')">Set to Unknown</button>
     </template>
   </div>
 </template>
@@ -20,8 +23,8 @@ export default {
     };
   },
   methods: {
-    setToNormal() {
-      this.server.status = "Normal";
+    updateServer(status) {
+      this.server.status = status;
       this.updated = true;
     }
   },
